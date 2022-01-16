@@ -10,9 +10,11 @@ public class LoginTest extends BaseTest{
      * 3. Kada se pojavi modal za prijavu, polje Email i Lozinka popuniti validnim podacima
 
      * 4. Kliknuti dugme PRIJAVA
+     * 5. Odjavi se sa naloga
      *
      * Expected result:
      * 4. Na stranici su sada prisutni profil korisnika, postani Vip i Odjava
+     * 5. Na stranici su sada prisutni Prijavite se i Registrujte se
      */
 
     @Test
@@ -41,10 +43,15 @@ public class LoginTest extends BaseTest{
             loginPage.odjavaSaProfilaPrisutnaNaStranici ();
             loginPage.profilKorisnikaPrisutanNaStranici ();
 
+            print ( "5.Odjavi se sa naloga" );
+            loginPage.clickOdjava ();
+            print ( "5.Na stranici su sada prisutni Prijavite se i Registrujte se" );
+            loginPage.daLiSuPrisutniPrijaviteSeiRegistrujteSe ();
+
 
 
         }finally {
-            driver.quit ();
+            //driver.quit ();
         }
     }
 

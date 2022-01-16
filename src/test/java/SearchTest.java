@@ -8,7 +8,7 @@ public class SearchTest extends BaseTest{
      * 1. Navigiraj na bebakids.com
      * 2. Unesi zeljeni proizvod u polje za pretragu i klikni Enter
      * 3. Filtriraj dobijeni rezultat u meniju sa leve strane
-     * 4. Izaberi opcije pol Zenski, velicina 4, raspon cene 3001-3500
+     * 4. Izaberi opcije pol Zenski, velicina 4, raspon cene 1501-2000
      *
      * Expected result:
      * 4. Verifikuj da su prikazani filteri u blok tagu
@@ -29,12 +29,12 @@ public class SearchTest extends BaseTest{
             basePage.enterTextInSearchField ( "haljina" );
 
             print ( "Verifikuj da je URL https://www.bebakids.com/proizvodi?search=haljina" );
-            assert isCurrentUrlEqualsTo ( "https://www.bebakids.com/proizvodi?search=haljina" ):"Error. Expected URL is https://www.bebakids.com/proizvodi?search=haljina" ;
+            assert isCurrentUrlEqualsTo ( Strings.HALJINA):"Error. Trebalo bi da si na " + Strings.HALJINA ;
 
             SearchPage searchPage = new SearchPage ( driver );
 
-            print ( "U levom delu ekrana oznaci filtere: pol zenski, velicina 4 i cena od 2501 do 3000 RSD" );
-            searchPage.oznaciFilterPolZenskiVelicina4Cena3001Do3500 ();
+            print ( "U levom delu ekrana oznaci filtere: pol zenski, velicina 4 i cena od 1501 do 2000 RSD" );
+            searchPage.oznaciFilterPolZenskiVelicina4Cena1501Do2000 ();
 
             print ( "Verifikuj da su svi filteri prikazani u blok tagu" );
             searchPage.daLiSuSviFilteriOznaceniUBlokTagu ();
@@ -79,7 +79,7 @@ public class SearchTest extends BaseTest{
             basePage.enterTextInSearchField ( "haljina" );
 
             print ( "2.Verifikuj da je URL https://www.bebakids.com/proizvodi?search=haljina" );
-            assert isCurrentUrlEqualsTo ( "https://www.bebakids.com/proizvodi?search=haljina" ):"Error. Expected URL is https://www.bebakids.com/proizvodi?search=haljina" ;
+            assert isCurrentUrlEqualsTo ( Strings.HALJINA ):"Error. Trebalo bi da si na " + Strings.HALJINA ;
 
             print ( "3.Odaberi filter Velicina 4" );
             SearchPage searchPage = new SearchPage ( driver );

@@ -48,6 +48,9 @@ public class LoginPage extends BasePage{
     @FindBy(id = "registration_modal")
     WebElement registracioniModal;
 
+    @FindBy(className = "register-btn")
+    WebElement registracijaButton;
+
 
     //Konstruktor
     public LoginPage(WebDriver driver) {
@@ -123,6 +126,17 @@ public class LoginPage extends BasePage{
     }
     public void daLiJeRegistracioniModalPrisutan(){
         assert isElementPresent ( registracioniModal ):"Error. Registracioni modal is not shown.";
+    }
+
+    public void clickOdjava(){
+        assert isElementPresent ( odjavaSaProfila ):"Error. Nisi ulogovan.";
+        odjavaSaProfila.click ();
+    }
+
+    public void daLiSuPrisutniPrijaviteSeiRegistrujteSe(){
+        assert isElementPresent ( prijaviteSeButton ):"Error. Prijavite se dugme se ne prikazuje.";
+        assert isElementPresent ( registracijaButton ):"Error. Registrujte se dugme se ne prikazuje.";
+
     }
 
 

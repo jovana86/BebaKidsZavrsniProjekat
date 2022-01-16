@@ -65,7 +65,7 @@ public class ZaposlenjeTest extends BaseTest{
 
 
         }finally {
-            // driver.quit ();
+             driver.quit ();
         }
 
     }

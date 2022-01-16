@@ -38,50 +38,50 @@ public class KorisnickiServisTest extends BaseTest{
             basePage.clickUsloviKoriscenja ();
 
             print ( "2.Verifikuj da si na https://www.bebakids.com/uslovi-koriscenja" );
-            assert isCurrentUrlEqualsTo ( "https://www.bebakids.com/uslovi-koriscenja"):"Error. " +
-                    "Trebalo bi da si na stranici https://www.bebakids.com/uslovi-koriscenja.";
+            assert isCurrentUrlEqualsTo ( Strings.USLOVI_KORISCENJA):"Error. " +
+                    "Trebalo bi da si na stranici " + Strings.USLOVI_KORISCENJA;
 
             print ( "3.U footer delu ekrana odaberi opciju Pravo na odustajanje  i verifikuj naslov stranice" );
             basePage.clickPravoNaOdustajanje ();
 
             print ( "3.Verifikuj da si na https://www.bebakids.com/pravo-na-odustajanje" );
-            assert isCurrentUrlEqualsTo ( "https://www.bebakids.com/pravo-na-odustajanje" ):"Error. " +
-                    "Trebalo bi da si na stranici https://www.bebakids.com/pravo-na-odustajanje.";
+            assert isCurrentUrlEqualsTo ( Strings.PRAVO_NA_ODUSTAJANJE):"Error. " +
+                    "Trebalo bi da si na stranici " + Strings.PRAVO_NA_ODUSTAJANJE;
 
             print ( "4.U footer delu ekrana odaberi opciju Isporuka" );
             basePage.clickIsporuka ();
 
             print ( "4.Verifikuj da si na https://www.bebakids.com/isporuka" );
-            assert isCurrentUrlEqualsTo ( "https://www.bebakids.com/isporuka" ):"Error. " +
-                    "Trebalo bi da si na stranici https://www.bebakids.com/isporuka.";
+            assert isCurrentUrlEqualsTo ( Strings.ISPORUKA ):"Error. " +
+                    "Trebalo bi da si na stranici " + Strings.ISPORUKA;
 
             print ( "5.U footer delu ekrana odaberi opciju Reklamacije i verifikuj naslov stranice" );
             basePage.clickReklamacije ();
 
             print ( "5.Verifikuj da si na https://www.bebakids.com/reklamacije" );
-            assert isCurrentUrlEqualsTo ( "https://www.bebakids.com/reklamacije" ):"Error. " +
-                    "Trebalo bi da si na stranici https://www.bebakids.com/reklamacije.";
+            assert isCurrentUrlEqualsTo ( Strings.REKLAMACIJE ):"Error. " +
+                    "Trebalo bi da si na stranici " + Strings.REKLAMACIJE;
 
             print ( "6.U footer delu ekrana odaberi opciju Povracaj sredstava i verifikuj naslov stranice" );
             basePage.clickPovracajSredstava ();
             print ( "6.Verifikuj da si na https://www.bebakids.com/povracaj-robe" );
-            assert isCurrentUrlEqualsTo ( "https://www.bebakids.com/povracaj-robe" ):"Error. " +
-                    "Trebalo bi da si na stranici https://www.bebakids.com/povracaj-robe.";
+            assert isCurrentUrlEqualsTo ( Strings.POVRACAJ_ROBE ):"Error. " +
+                    "Trebalo bi da si na stranici " + Strings.POVRACAJ_ROBE;
 
             print ( "7.U footer delu ekrana odaberi opciju Nacini placanja i verifikuj naslov stranice" );
             basePage.clickNaciniPlacanja ();
 
             print ( "7. Verifikuj da si na https://www.bebakids.com/nacini-placanja" );
-            assert isCurrentUrlEqualsTo ( "https://www.bebakids.com/nacini-placanja" ):"Error." +
-                    "Trebalo bi da si na https://www.bebakids.com/nacini-placanja.";
+            assert isCurrentUrlEqualsTo ( Strings.NACINI_PLACANJA ):"Error." +
+                    "Trebalo bi da si na " + Strings.NACINI_PLACANJA;
 
             print ( "8.U footer delu ekrana odaberi opciju Uputstvo za registraciju i verifikuj naslov stranice" );
             basePage.clickUputstvoZaRegistraciju ();
 
             print ( "8.Verifikuj da si na https://www.bebakids.com/uputstvo-za-registraciju" );
-            assert isCurrentUrlEqualsTo ( "https://www.bebakids.com/uputstvo-za-registraciju" ):"Error." +
-                    "Trebalo bi da si na https://www.bebakids.com/uputstvo-za-registraciju.";
-            driver.close ();
+            assert isCurrentUrlEqualsTo ( Strings.UPUTSTVO_ZA_REGISTRACIJU ):"Error." +
+                    "Trebalo bi da si na " + Strings.UPUTSTVO_ZA_REGISTRACIJU;
+
 
 
 

@@ -53,6 +53,8 @@ public class BasePage {
     WebElement povezimoSeInstagram;
 
     @FindBy(xpath = "//h1[text()='Instagram']")
+    //@FindBy(xpath = "//img[@alt='Instagram']")
+    //@FindBy(xpath = "//button[text()='Log In']")
     WebElement naslovnaInstagram;
 
     @FindBy(xpath = "//ul[@class='nav items-wrapper']//a[text()='Zaposlenje']")
@@ -64,7 +66,6 @@ public class BasePage {
 
     @FindBy(xpath = "//div[@class='title']/h1/span")
     WebElement naslovONama;
-    ///html/body/div[1]/main/div[2]/div/div[1]/div/div[1]/div/h1/span
 
     @FindBy(xpath = "//div[@class='post-content']")
     WebElement tekstONama;
@@ -131,11 +132,6 @@ public class BasePage {
 
     @FindBy(xpath = "//div[@class='title']/h1")
     WebElement naslovUputstvoZaRegistraciju;
-
-
-
-
-
 
 
 
@@ -208,7 +204,7 @@ public class BasePage {
 
         print ( "Verifikacija da je Facebook prijavi se prisutan na stranici" );
         assert isElementPresent (prijaviSeFB ):"Error. Nisi na Facebook stranici. ";
-        assert isCurrentUrlEqualsTo ( "https://www.facebook.com/bebakids/" ):"Error. Nisi na Facebook stranici";
+        assert isCurrentUrlEqualsTo ( Strings.FACEBOOK ):"Error. Nisi na Facebook stranici";
         driver.close();
         driver.switchTo().window(tabs.get(0));
 
@@ -223,7 +219,7 @@ public class BasePage {
 
         print ( "Verifikacija da je YouTube logo prisutan na stranici" );
         assert isElementPresent (logoYouTube ):"Error. Nisi na YouTube stranici. ";
-        assert isCurrentUrlEqualsTo ( "https://www.youtube.com/channel/UCzRxCLt2QtSSx0Nr60_DDWw" ):"Error. Nisi na YouTube stranici.";
+        assert isCurrentUrlEqualsTo ( Strings.YOUTUBE ):"Error. Nisi na YouTube stranici.";
         driver.close();
         driver.switchTo().window(tabs.get(0));
     }
@@ -234,8 +230,9 @@ public class BasePage {
         driver.switchTo().window(tabs.get(1));
         sleep ();
         print ( "Verifikacija da je Instagram naslov prisutan na stranici" );
+
         assert isElementPresent (naslovnaInstagram ):"Error. Nisi na Instagram stranici. ";
-        assert isCurrentUrlEqualsTo ( "https://www.instagram.com/accounts/login/" ):"Error. Nisi na Instagram stranici.";
+        assert isCurrentUrlEqualsTo ( Strings.INSTAGRAM ):"Error. Nisi na Instagram stranici.";
 
         driver.close();
         driver.switchTo().window(tabs.get(0));

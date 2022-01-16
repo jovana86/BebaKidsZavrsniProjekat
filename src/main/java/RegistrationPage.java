@@ -71,25 +71,18 @@ public class RegistrationPage extends BasePage{
     @FindBy(xpath = "//form[@id='registration_modal']//button[@class='close']")
     WebElement registracijaCloseModal;
 
-//
-
     @FindBy(xpath = "//div[@class='modal-dialog']//div[@class='col-xs-12 col-sm-6']//li[text()='Ovo polje je obavezno.']")
     WebElement registracijaValidationError;
 
-    //@FindBy(xpath = "//div[@class='modal-dialog']//div[@class='col-xs-12 col-sm-6 reg-email-input-wrapper']//li[text()='Unesite validan email.']")
     @FindBy(xpath = "//li[text()='Unesite validan email.']")
     WebElement registracijaEmailErrorMessage;
 
-    // @FindBy(xpath = "//div[@class='modal-dialog']//div[@class='col-xs-12 col-sm-6 reg-phone-input-wrapper']//li[text()='Ovo polje nije validno.']")
     @FindBy(xpath = "//li[text()='Ovo polje nije validno.']")
     WebElement registracijaTelefonErrorMessage;
 
-    //@FindBy(xpath = "//div[@class='modal-dialog']//div[@class='col-xs-12 col-sm-6 password-input-wrapper']//li[text()='Ovo polje sadrži manje od 6 karaktera.']")
     @FindBy(xpath = "//li[text()='Ovo polje sadrži manje od 6 karaktera.']")
     WebElement registracijaLozinkaDo6KarakteraErrorMessage;
 
-
-    //@FindBy(xpath = "//div[@class='col-xs-12 col-sm-6 postcode-input-wrapper']//li[text()='Dužina ovog polja mora biti 5 karaktera.']")
     @FindBy(xpath = "//li[text()='Dužina ovog polja mora biti 5 karaktera.']")
     WebElement registracijaPostanskiBrojSaViseILiManjeOd5KarakteraErrorMessage;
 
@@ -176,7 +169,6 @@ public class RegistrationPage extends BasePage{
         registracijaBrojULice.sendKeys ( Strings.REGISTRACIJA_BROJ_ULICE );
     }
 
-//TODO uradi aserte kako treba
 
     public void registracijaUnesiLozinku(){
         assert isElementPresent ( registracijaLozinka ):"Error. Registration modal is not open";
@@ -195,7 +187,7 @@ public class RegistrationPage extends BasePage{
         registracijaPonoviteLozinku.sendKeys ( Strings.REGISTRACIJA_DO6KARAKTERA_LOZINKA );
     }
 
-    //PROBLEM
+
     public void registracijaOznaciPolZenski(){
 
         assert isElementPresent ( registracijaPolZenski ):"Error. Registration modal is not open";

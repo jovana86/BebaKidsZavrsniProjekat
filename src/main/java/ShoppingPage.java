@@ -79,7 +79,8 @@ public class ShoppingPage extends BasePage{
     @FindBy(xpath = "//div[@class='product-item-title text-left']")
     WebElement artikalUKorpi;
 
-    @FindBy(xpath = "//i[@class='icon fa fa-shopping-cart']")
+   // @FindBy(xpath = "//i[@class='icon fa fa-shopping-cart']")
+            @FindBy(xpath = "//a[@title='Korpa']")
     WebElement korpa;
 
 
@@ -132,8 +133,10 @@ public class ShoppingPage extends BasePage{
         dodajUKorpu.click ();
     }
     public void clickKorpa(){
-        assert isElementPresent ( korpa ):"Error";
-        korpa.click ();
+        assert isElementPresent ( korpa ):"Error. Element Korpa se ne prikazuje.";
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("arguments[0].click();", korpa);
+
     }
 
     public void clickIkonicaKorpa(){

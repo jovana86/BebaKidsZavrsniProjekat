@@ -55,7 +55,7 @@ public class ShoppingTest extends BaseTest{
             assert brojArtikalaUKorpi.equals("1") : "Error. Broj artikala u korpi nije odgovarajuci.";
 
             print ( "Klikni na ikonicu korpa i verifikuj da je u njoj odabrani artikal i da si na stranici Kupovina" );
-            //shoppingPage.clickIkonicaKorpa ();
+
             shoppingPage.clickKorpa ();
             shoppingPage.sleep ();
 

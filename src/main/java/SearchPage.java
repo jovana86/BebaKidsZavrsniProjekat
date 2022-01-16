@@ -43,6 +43,9 @@ public class SearchPage extends BasePage{
     @FindBy(xpath = "//div[text()='3.001 - 3.500 RSD']")
     WebElement pretragaFilterCena2501Do3000Oznacen;
 
+    @FindBy(xpath = "//div[text()='1.501 - 2.000 RSD']")
+    WebElement pretragaFilterCena1501Do2000Oznacen;
+
     @FindBy(id = "sort")
     WebElement dropdownSortiraj;
 
@@ -104,10 +107,10 @@ public class SearchPage extends BasePage{
         sleep ();
     }
 
-    public void oznaciFilterPolZenskiVelicina4Cena3001Do3500() {
+    public void oznaciFilterPolZenskiVelicina4Cena1501Do2000() {
         this.oznaciFilterPolZenski ();
         this.oznaciFilterVelicina4 ();
-        this.oznaciFilterCena3001Do3500 ();
+        this.oznaciFilterCena1501Do2000 ();
     }
 
 
@@ -131,12 +134,17 @@ public class SearchPage extends BasePage{
         print ( "Da li se cena od 2501 do 3000 pojavljuje kao filter u blok tagu" );
         assert isElementPresent ( pretragaFilterCena2501Do3000Oznacen ) : "Error. Filter Cena 2501 do 3000 nije prikazan.";
     }
+    public void daLiJeCena1501Do2000UBlokTagu(){
+        print ( "Da li se cena od 1501 do 2000 pojavljuje kao filter u blok tagu" );
+        assert isElementPresent (pretragaFilterCena1501Do2000Oznacen  ):"Error. Filter Cena 1501 do 2000 nije prikazan.";
+    }
 
     public void daLiSuSviFilteriOznaceniUBlokTagu() {
         this.daLiJePolZenskiOznacenUBlokTagu ();
         this.daLiJeHaljinaOznacenaUBlokTagu ();
         this.daLiJeVelicina04UBlokTagu ();
-        this.daLiJeCena2501Do3000UBlokTagu ();
+        this.daLiJeCena1501Do2000UBlokTagu ();
+        //this.daLiJeCena2501Do3000UBlokTagu ();
     }
 
     public void dropdownSortirajClick() {
